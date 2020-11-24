@@ -14,11 +14,13 @@ import { UserResolver } from "./resolvers/user";
 import { COOKIE_NAME, __prod__ } from "./constants";
 import { MyContext } from "./types";
 import cors from "cors";
+// import { User } from "./entities/User";
 //import { sendEmail } from "./utils/sendEmail";
 
 const main = async () => {
   //sendEmail("nick@nick.com", "hello there");
   const orm = await MikroORM.init(microConfig);
+  // await orm.em.nativeDelete(User, {});
   await orm.getMigrator().up();
 
   //   const post = orm.em.create(Post, { title: "my first post" });
