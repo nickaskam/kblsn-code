@@ -18,7 +18,7 @@ import cors from "cors";
 //import { sendEmail } from "./utils/sendEmail";
 
 const main = async () => {
-  //sendEmail("nick@nick.com", "hello there");
+  // sendEmail("nick@nick.com", "hello there");
   const orm = await MikroORM.init(microConfig);
   // await orm.em.nativeDelete(User, {});
   await orm.getMigrator().up();
